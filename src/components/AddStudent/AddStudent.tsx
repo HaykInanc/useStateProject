@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useState } from 'react'
+import s from './style.module.css'
 
 type FormData = {
     firstName:string,
@@ -17,7 +18,7 @@ export default function AddStudent() {
   }
 
   return (
-    <form>
+    <form className={s.form}>
         <input value={student.firstName} type="text" name='firstName' onChange={changeHandler}/>
         <input value={student.lastName} type="text" name='lastName' onChange={changeHandler}/>
         <button>Добавить</button>
